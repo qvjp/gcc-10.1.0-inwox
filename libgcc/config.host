@@ -1453,6 +1453,14 @@ vax-*-netbsdelf*)
 	;;
 vax-*-openbsd*)
 	;;
+i[34567]86-*-inwox*)
+	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
+	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
+	;;
+x86_64-*-inwox*)
+	extra_parts="$extra_parts crti.o crtbegin.o crtend.o crtn.o"
+	tmake_file="$tmake_file i386/t-crtstuff t-crtstuff-pic t-libgcc-pic"
+	;;
 visium-*-elf*)
         extra_parts="$extra_parts crtbegin.o crtend.o crti.o crtn.o"
         tmake_file="visium/t-visium t-fdpbit"
